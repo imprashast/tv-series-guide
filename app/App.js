@@ -1,8 +1,11 @@
 import React from 'react';
 import {Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, Footer, FooterTab } from "native-base";
 import ShowsTab from './components/ShowsTab';
+import {Drawer} from 'native-base';
 import styles from "./styles";
 import ShowsFooter from './components/ShowsFooter';
+import Sidebar from './components/Sidebar';
+
 
 export default class App extends React.Component {
 
@@ -11,9 +14,18 @@ export default class App extends React.Component {
         var updateContent  = this.updateContent.bind(this);
         var initComponent = <ShowsTab/>;
         this.state = {
-            mainContent: initComponent
+            mainContent: initComponent,
+            shadowOffsetWidth: 1,
+            shadowRadius: 4,
         };
     }
+
+    closeDrawer = () => {
+        this.drawer._root.close()
+    };
+    openDrawer = () => {
+        this.drawer._root.open()
+    };
 
     async componentWillMount() {
         await Expo.Font.loadAsync({
@@ -32,10 +44,14 @@ export default class App extends React.Component {
         var updateContent = this.updateContent;
         return (
             <Container style={styles.container}>
+                <Drawer
+                    ref={(ref) => { this.drawer = ref; }}
+                    content={<Sidebar/>}
+                    onClose={() => this.closeDrawer()} >
                 <Header hasTabs>
                     <Left>
-                        <Button transparent onPress={() => this.props.navigation.goBack()}>
-                            <Icon name="arrow-back" />
+                        <Button transparent onPress={() => this.openDrawer()}>
+                            <Icon name="ios-menu" />
                         </Button>
                     </Left>
                     <Body>
@@ -58,6 +74,7 @@ export default class App extends React.Component {
                         <ShowsFooter updateContent={updateContent.bind(this)} />
 
                 </Footer>
+                </Drawer>
             </Container>
         );
     }

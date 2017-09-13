@@ -23,19 +23,11 @@ import styles from "../styles";
 
 const datas = [
     {
-        img: 'http://thetvdb.com/banners/_cache/posters/282670-13.jpg',
-        text: "Narcos",
-        note: "3x01 The Kingpin Strategy",
-        aired: "6 days ago",
-        airDetails: "10 remaining Netflix - Fri 9:00 AM"
-
-    },
-    {
         img: 'http://thetvdb.com/banners/_cache/posters/121361-57.jpg',
         text: "Game of Thrones",
-        note: "7x07 The Dragon and the Wolf",
-        aired: "6 days ago",
-        airDetails: "1 remaining HBO - Mon 3:00 AM"
+        note: "7x03 The Queen's Justice",
+        aired: "",
+        airDetails: "2 Sep ✓"
 
     },
 ];
@@ -61,6 +53,7 @@ export default class HistoryTab extends Component {
         return (
             <Container style={styles.container}>
                 <Content>
+                    <Text style={styles.recentlyWatched}>Recently Watched</Text>
                     <List
                         dataSource={this.ds.cloneWithRows(this.state.listViewData)}
                         renderRow={data =>
