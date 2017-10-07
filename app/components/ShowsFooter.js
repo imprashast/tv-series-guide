@@ -3,6 +3,7 @@ import {Container, Header, Title, Button, Icon, Tabs, Tab, Right, Left, Badge, T
 import styles from '../styles';
 import HistoryTab from './HistoryTab';
 import ShowsTab from './ShowsTab';
+import RecentTab from './RecentTab';
 
 export default class ShowsFooter extends React.Component {
     constructor(props) {
@@ -55,6 +56,7 @@ export default class ShowsFooter extends React.Component {
         var updateContent = this.props.updateContent;
         var historyTab = <HistoryTab/>;
         var showsTab = <ShowsTab/>;
+        var recentTab = <RecentTab init={true}/>;
         return (
             <FooterTab>
                 <Button
@@ -71,7 +73,7 @@ export default class ShowsFooter extends React.Component {
                     <Text style={styles.tabHeading}>SHOWS</Text>
                 </Button>
                 <Button active={this.state.tab2} onPress={() => {
-                    updateContent(historyTab);
+                    //updateContent(historyTab);
                     this.toggleTab2();
                 }}>
                     <Icon active={this.state.tab2} name="archive" />
@@ -79,7 +81,10 @@ export default class ShowsFooter extends React.Component {
                 </Button>
                 <Button
                     active={this.state.tab3}
-                    onPress={() => this.toggleTab3()}
+                    onPress={() => {
+                        updateContent(recentTab);
+                        this.toggleTab3()
+                    }}
                     vertical
                     badge
                 >
