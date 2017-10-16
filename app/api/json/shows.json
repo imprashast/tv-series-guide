@@ -1,0 +1,818 @@
+[
+  {
+    "plays": 29,
+    "last_watched_at": "2017-09-06T22:30:00.000Z",
+    "show": {
+      "title": "Narcos",
+      "year": 2015,
+      "ids": {
+        "trakt": 94630,
+        "slug": "narcos",
+        "tvdb": 282670,
+        "imdb": "tt2707408",
+        "tmdb": 63351,
+        "tvrage": 37241
+      }
+    }
+  },
+  {
+    "plays": 95,
+    "last_watched_at": "2017-05-14T18:36:55.000Z",
+    "show": {
+      "title": "Prison Break",
+      "year": 2005,
+      "ids": {
+        "trakt": 2274,
+        "slug": "prison-break",
+        "tvdb": 75340,
+        "imdb": "tt0455275",
+        "tmdb": 2288,
+        "tvrage": null
+      }
+    }
+  },
+  {
+    "plays": 25,
+    "last_watched_at": "2017-05-14T18:36:46.000Z",
+    "show": {
+      "title": "Fargo",
+      "year": 2014,
+      "ids": {
+        "trakt": 60203,
+        "slug": "fargo",
+        "tvdb": 269613,
+        "imdb": "tt2802850",
+        "tmdb": 60622,
+        "tvrage": 35276
+      }
+    }
+  },
+  {
+    "plays": 72,
+    "last_watched_at": "2017-05-13T22:59:21.000Z",
+    "show": {
+      "title": "Gotham",
+      "year": 2014,
+      "ids": {
+        "trakt": 60278,
+        "slug": "gotham",
+        "tvdb": 274431,
+        "imdb": "tt3749900",
+        "tmdb": 60708,
+        "tvrage": 38049
+      }
+    }
+  },
+  {
+    "plays": 280,
+    "last_watched_at": "2017-05-13T20:56:04.000Z",
+    "show": {
+      "title": "Supernatural",
+      "year": 2005,
+      "ids": {
+        "trakt": 1611,
+        "slug": "supernatural",
+        "tvdb": 78901,
+        "imdb": "tt0460681",
+        "tmdb": 1622,
+        "tvrage": 5410
+      }
+    }
+  },
+  {
+    "plays": 128,
+    "last_watched_at": "2017-05-12T21:24:32.000Z",
+    "show": {
+      "title": "Arrow",
+      "year": 2012,
+      "ids": {
+        "trakt": 1403,
+        "slug": "arrow",
+        "tvdb": 257655,
+        "imdb": "tt2193021",
+        "tmdb": 1412,
+        "tvrage": 30715
+      }
+    }
+  },
+  {
+    "plays": 243,
+    "last_watched_at": "2017-05-12T21:24:30.000Z",
+    "show": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "ids": {
+        "trakt": 1409,
+        "slug": "the-big-bang-theory",
+        "tvdb": 80379,
+        "imdb": "tt0898266",
+        "tmdb": 1418,
+        "tvrage": 8511
+      }
+    }
+  },
+  {
+    "plays": 195,
+    "last_watched_at": "2017-05-12T17:38:35.000Z",
+    "show": {
+      "title": "Modern Family",
+      "year": 2009,
+      "ids": {
+        "trakt": 1412,
+        "slug": "modern-family",
+        "tvdb": 95011,
+        "imdb": "tt1442437",
+        "tmdb": 1421,
+        "tvrage": 22622
+      }
+    }
+  },
+  {
+    "plays": 97,
+    "last_watched_at": "2017-05-12T17:38:23.000Z",
+    "show": {
+      "title": "Archer",
+      "year": 2009,
+      "ids": {
+        "trakt": 10234,
+        "slug": "archer",
+        "tvdb": 110381,
+        "imdb": "tt1486217",
+        "tmdb": 10283,
+        "tvrage": 23354
+      }
+    }
+  },
+  {
+    "plays": 73,
+    "last_watched_at": "2017-05-10T17:46:47.000Z",
+    "show": {
+      "title": "The Flash",
+      "year": 2014,
+      "ids": {
+        "trakt": 60300,
+        "slug": "the-flash-2014",
+        "tvdb": 279121,
+        "imdb": "tt3107288",
+        "tmdb": 60735,
+        "tvrage": 36939
+      }
+    }
+  },
+  {
+    "plays": 33,
+    "last_watched_at": "2017-05-09T19:06:50.000Z",
+    "show": {
+      "title": "Silicon Valley",
+      "year": 2014,
+      "ids": {
+        "trakt": 60157,
+        "slug": "silicon-valley",
+        "tvdb": 277165,
+        "imdb": "tt2575988",
+        "tmdb": 60573,
+        "tvrage": 33759
+      }
+    }
+  },
+  {
+    "plays": 23,
+    "last_watched_at": "2017-05-01T00:06:15.000Z",
+    "show": {
+      "title": "Rick and Morty",
+      "year": 2013,
+      "ids": {
+        "trakt": 69829,
+        "slug": "rick-and-morty",
+        "tvdb": 275274,
+        "imdb": "tt2861424",
+        "tmdb": 60625,
+        "tvrage": 33381
+      }
+    }
+  },
+  {
+    "plays": 108,
+    "last_watched_at": "2017-04-06T20:07:58.000Z",
+    "show": {
+      "title": "The Walking Dead",
+      "year": 2010,
+      "ids": {
+        "trakt": 1393,
+        "slug": "the-walking-dead",
+        "tvdb": 153021,
+        "imdb": "tt1520211",
+        "tmdb": 1402,
+        "tvrage": 25056
+      }
+    }
+  },
+  {
+    "plays": 9,
+    "last_watched_at": "2017-03-16T09:44:07.000Z",
+    "show": {
+      "title": "A Series of Unfortunate Events",
+      "year": 2017,
+      "ids": {
+        "trakt": 104926,
+        "slug": "a-series-of-unfortunate-events",
+        "tvdb": 306304,
+        "imdb": "tt4834206",
+        "tmdb": 65294,
+        "tvrage": null
+      }
+    }
+  },
+  {
+    "plays": 16,
+    "last_watched_at": "2017-02-03T22:27:13.000Z",
+    "show": {
+      "title": "DC's Legends of Tomorrow",
+      "year": 2016,
+      "ids": {
+        "trakt": 98898,
+        "slug": "dc-s-legends-of-tomorrow",
+        "tvdb": 295760,
+        "imdb": "tt4532368",
+        "tmdb": 62643,
+        "tvrage": 48407
+      }
+    }
+  },
+  {
+    "plays": 21,
+    "last_watched_at": "2017-01-16T21:38:05.000Z",
+    "show": {
+      "title": "Sherlock",
+      "year": 2010,
+      "ids": {
+        "trakt": 19792,
+        "slug": "sherlock",
+        "tvdb": 176941,
+        "imdb": "tt1475582",
+        "tmdb": 19885,
+        "tvrage": 23433
+      }
+    }
+  },
+  {
+    "plays": 61,
+    "last_watched_at": "2017-01-15T17:12:44.000Z",
+    "show": {
+      "title": "Homeland",
+      "year": 2011,
+      "ids": {
+        "trakt": 1398,
+        "slug": "homeland",
+        "tvdb": 247897,
+        "imdb": "tt1796960",
+        "tmdb": 1407,
+        "tvrage": 27811
+      }
+    }
+  },
+  {
+    "plays": 11,
+    "last_watched_at": "2016-12-26T18:46:46.000Z",
+    "show": {
+      "title": "Westworld",
+      "year": 2016,
+      "ids": {
+        "trakt": 99718,
+        "slug": "westworld",
+        "tvdb": 296762,
+        "imdb": "tt0475784",
+        "tmdb": 63247,
+        "tvrage": 37537
+      }
+    }
+  },
+  {
+    "plays": 29,
+    "last_watched_at": "2016-12-14T16:27:49.000Z",
+    "show": {
+      "title": "Ash vs Evil Dead",
+      "year": 2015,
+      "ids": {
+        "trakt": 99460,
+        "slug": "ash-vs-evil-dead",
+        "tvdb": 296295,
+        "imdb": "tt4189022",
+        "tmdb": 62264,
+        "tvrage": 46180
+      }
+    }
+  },
+  {
+    "plays": 23,
+    "last_watched_at": "2016-11-02T06:40:18.000Z",
+    "show": {
+      "title": "Better Call Saul",
+      "year": 2015,
+      "ids": {
+        "trakt": 59660,
+        "slug": "better-call-saul",
+        "tvdb": 273181,
+        "imdb": "tt3032476",
+        "tmdb": 60059,
+        "tvrage": 37780
+      }
+    }
+  },
+  {
+    "plays": 15,
+    "last_watched_at": "2016-10-22T15:07:53.000Z",
+    "show": {
+      "title": "Black Mirror",
+      "year": 2011,
+      "ids": {
+        "trakt": 41793,
+        "slug": "black-mirror",
+        "tvdb": 253463,
+        "imdb": "tt2085059",
+        "tmdb": 42009,
+        "tvrage": 30348
+      }
+    }
+  },
+  {
+    "plays": 52,
+    "last_watched_at": "2016-10-12T09:38:19.000Z",
+    "show": {
+      "title": "House of Cards",
+      "year": 2013,
+      "ids": {
+        "trakt": 1416,
+        "slug": "house-of-cards",
+        "tvdb": 262980,
+        "imdb": "tt1856010",
+        "tmdb": 1425,
+        "tvrage": 27822
+      }
+    }
+  },
+  {
+    "plays": 25,
+    "last_watched_at": "2016-09-22T14:09:25.000Z",
+    "show": {
+      "title": "Mr. Robot",
+      "year": 2015,
+      "ids": {
+        "trakt": 93720,
+        "slug": "mr-robot",
+        "tvdb": 289590,
+        "imdb": "tt4158110",
+        "tmdb": 62560,
+        "tvrage": 42422
+      }
+    }
+  },
+  {
+    "plays": 13,
+    "last_watched_at": "2016-09-20T20:02:31.000Z",
+    "show": {
+      "title": "One-Punch Man",
+      "year": 2015,
+      "ids": {
+        "trakt": 97548,
+        "slug": "one-punch-man",
+        "tvdb": 293088,
+        "imdb": "tt4508902",
+        "tmdb": 63926,
+        "tvrage": null
+      }
+    }
+  },
+  {
+    "plays": 9,
+    "last_watched_at": "2016-08-30T17:52:59.000Z",
+    "show": {
+      "title": "The Night Of",
+      "year": 2016,
+      "ids": {
+        "trakt": 107202,
+        "slug": "the-night-of",
+        "tvdb": 310516,
+        "imdb": "tt2401256",
+        "tmdb": 66276,
+        "tvrage": 52307
+      }
+    }
+  },
+  {
+    "plays": 10,
+    "last_watched_at": "2016-08-01T15:37:00.000Z",
+    "show": {
+      "title": "Preacher",
+      "year": 2016,
+      "ids": {
+        "trakt": 102034,
+        "slug": "preacher",
+        "tvdb": 300472,
+        "imdb": "tt5016504",
+        "tmdb": 64230,
+        "tvrage": 39033
+      }
+    }
+  },
+  {
+    "plays": 9,
+    "last_watched_at": "2016-07-22T20:06:17.000Z",
+    "show": {
+      "title": "11.22.63",
+      "year": 2016,
+      "ids": {
+        "trakt": 102771,
+        "slug": "11-22-63",
+        "tvdb": 301824,
+        "imdb": "tt2879552",
+        "tmdb": 64464,
+        "tvrage": 45210
+      }
+    }
+  },
+  {
+    "plays": 8,
+    "last_watched_at": "2016-07-20T18:20:12.000Z",
+    "show": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "ids": {
+        "trakt": 104439,
+        "slug": "stranger-things",
+        "tvdb": 305288,
+        "imdb": "tt4574334",
+        "tmdb": 66732,
+        "tvrage": 48493
+      }
+    }
+  },
+  {
+    "plays": 81,
+    "last_watched_at": "2016-06-27T09:09:27.000Z",
+    "show": {
+      "title": "Game of Thrones",
+      "year": 2011,
+      "ids": {
+        "trakt": 1390,
+        "slug": "game-of-thrones",
+        "tvdb": 121361,
+        "imdb": "tt0944947",
+        "tmdb": 1399,
+        "tvrage": 24493
+      }
+    }
+  },
+  {
+    "plays": 104,
+    "last_watched_at": "2016-06-25T10:30:05.000Z",
+    "show": {
+      "title": "Person of Interest",
+      "year": 2011,
+      "ids": {
+        "trakt": 1402,
+        "slug": "person-of-interest",
+        "tvdb": 248742,
+        "imdb": "tt1839578",
+        "tmdb": 1411,
+        "tvrage": 28376
+      }
+    }
+  },
+  {
+    "plays": 25,
+    "last_watched_at": "2016-04-27T10:25:19.000Z",
+    "show": {
+      "title": "Limitless",
+      "year": 2015,
+      "ids": {
+        "trakt": 99041,
+        "slug": "limitless",
+        "tvdb": 295743,
+        "imdb": "tt4422836",
+        "tmdb": 62687,
+        "tvrage": 47544
+      }
+    }
+  },
+  {
+    "plays": 13,
+    "last_watched_at": "2016-04-16T08:06:22.000Z",
+    "show": {
+      "title": "Billions",
+      "year": 2016,
+      "ids": {
+        "trakt": 77692,
+        "slug": "billions",
+        "tvdb": 279536,
+        "imdb": "tt4270492",
+        "tmdb": 62852,
+        "tvrage": 41376
+      }
+    }
+  },
+  {
+    "plays": 26,
+    "last_watched_at": "2016-04-15T10:27:20.000Z",
+    "show": {
+      "title": "Marvel's Daredevil",
+      "year": 2015,
+      "ids": {
+        "trakt": 77938,
+        "slug": "marvel-s-daredevil",
+        "tvdb": 281662,
+        "imdb": "tt3322312",
+        "tmdb": 61889,
+        "tvrage": 38796
+      }
+    }
+  },
+  {
+    "plays": 18,
+    "last_watched_at": "2016-03-05T10:09:37.000Z",
+    "show": {
+      "title": "Marvel's Agent Carter",
+      "year": 2015,
+      "ids": {
+        "trakt": 77677,
+        "slug": "marvel-s-agent-carter",
+        "tvdb": 281485,
+        "imdb": "tt3475734",
+        "tmdb": 61550,
+        "tvrage": 38412
+      }
+    }
+  },
+  {
+    "plays": 6,
+    "last_watched_at": "2016-01-02T18:57:56.000Z",
+    "show": {
+      "title": "Marvel's Jessica Jones",
+      "year": 2015,
+      "ids": {
+        "trakt": 79385,
+        "slug": "marvel-s-jessica-jones",
+        "tvdb": 284190,
+        "imdb": "tt2357547",
+        "tmdb": 38472,
+        "tvrage": 38797
+      }
+    }
+  },
+  {
+    "plays": 213,
+    "last_watched_at": "2015-10-19T17:33:30.000Z",
+    "show": {
+      "title": "Everybody Loves Raymond",
+      "year": 1996,
+      "ids": {
+        "trakt": 2127,
+        "slug": "everybody-loves-raymond",
+        "tvdb": 73663,
+        "imdb": "tt0115167",
+        "tmdb": 2140,
+        "tvrage": null
+      }
+    }
+  },
+  {
+    "plays": 3,
+    "last_watched_at": "2015-10-14T17:18:47.000Z",
+    "show": {
+      "title": "Quantico",
+      "year": 2015,
+      "ids": {
+        "trakt": 98885,
+        "slug": "quantico",
+        "tvdb": 295515,
+        "imdb": "tt4428122",
+        "tmdb": 62816,
+        "tvrage": 47481
+      }
+    }
+  },
+  {
+    "plays": 14,
+    "last_watched_at": "2015-10-12T22:17:31.000Z",
+    "show": {
+      "title": "Sense8",
+      "year": 2015,
+      "ids": {
+        "trakt": 70384,
+        "slug": "sense8",
+        "tvdb": 268156,
+        "imdb": "tt2431438",
+        "tmdb": 61664,
+        "tvrage": 35197
+      }
+    }
+  },
+  {
+    "plays": 125,
+    "last_watched_at": "2015-10-03T19:52:42.000Z",
+    "show": {
+      "title": "Dexter",
+      "year": 2006,
+      "ids": {
+        "trakt": 1396,
+        "slug": "dexter",
+        "tvdb": 79349,
+        "imdb": "tt0773262",
+        "tmdb": 1405,
+        "tvrage": null
+      }
+    }
+  },
+  {
+    "plays": 12,
+    "last_watched_at": "2015-09-26T18:01:39.000Z",
+    "show": {
+      "title": "Utopia",
+      "year": 2013,
+      "ids": {
+        "trakt": 46241,
+        "slug": "utopia",
+        "tvdb": 264991,
+        "imdb": "tt2384811",
+        "tmdb": 46511,
+        "tvrage": null
+      }
+    }
+  },
+  {
+    "plays": 38,
+    "last_watched_at": "2015-09-26T18:01:10.000Z",
+    "show": {
+      "title": "Death Note",
+      "year": 2006,
+      "ids": {
+        "trakt": 13855,
+        "slug": "death-note",
+        "tvdb": 79481,
+        "imdb": "tt0877057",
+        "tmdb": 13916,
+        "tvrage": null
+      }
+    }
+  },
+  {
+    "plays": 10,
+    "last_watched_at": "2015-07-28T07:50:53.000Z",
+    "show": {
+      "title": "Wayward Pines",
+      "year": 2015,
+      "ids": {
+        "trakt": 53085,
+        "slug": "wayward-pines",
+        "tvdb": 269750,
+        "imdb": "tt2618986",
+        "tmdb": 53425,
+        "tvrage": 34145
+      }
+    }
+  },
+  {
+    "plays": 10,
+    "last_watched_at": "2015-07-03T20:29:13.000Z",
+    "show": {
+      "title": "Band of Brothers",
+      "year": 2001,
+      "ids": {
+        "trakt": 4589,
+        "slug": "band-of-brothers",
+        "tvdb": 74205,
+        "imdb": "tt0185906",
+        "tmdb": 4613,
+        "tvrage": 2708
+      }
+    }
+  },
+  {
+    "plays": 317,
+    "last_watched_at": "2015-06-27T17:27:37.000Z",
+    "show": {
+      "title": "Two and a Half Men",
+      "year": 2003,
+      "ids": {
+        "trakt": 2673,
+        "slug": "two-and-a-half-men",
+        "tvdb": 72227,
+        "imdb": "tt0369179",
+        "tmdb": 2691,
+        "tvrage": 6454
+      }
+    }
+  },
+  {
+    "plays": 9,
+    "last_watched_at": "2015-06-18T03:36:50.000Z",
+    "show": {
+      "title": "True Detective",
+      "year": 2014,
+      "ids": {
+        "trakt": 46375,
+        "slug": "true-detective",
+        "tvdb": 270633,
+        "imdb": "tt2356777",
+        "tmdb": 46648,
+        "tvrage": 31369
+      }
+    }
+  },
+  {
+    "plays": 242,
+    "last_watched_at": "2015-06-14T19:20:16.000Z",
+    "show": {
+      "title": "Friends",
+      "year": 1994,
+      "ids": {
+        "trakt": 1657,
+        "slug": "friends",
+        "tvdb": 79168,
+        "imdb": "tt0108778",
+        "tmdb": 1668,
+        "tvrage": 3616
+      }
+    }
+  },
+  {
+    "plays": 3,
+    "last_watched_at": "2015-06-14T19:20:02.000Z",
+    "show": {
+      "title": "The Lost Room",
+      "year": 2006,
+      "ids": {
+        "trakt": 3845,
+        "slug": "the-lost-room",
+        "tvdb": 79637,
+        "imdb": "tt0830361",
+        "tmdb": 3868,
+        "tvrage": null
+      }
+    }
+  },
+  {
+    "plays": 216,
+    "last_watched_at": "2015-06-14T19:19:53.000Z",
+    "show": {
+      "title": "24",
+      "year": 2001,
+      "ids": {
+        "trakt": 1960,
+        "slug": "24",
+        "tvdb": 76290,
+        "imdb": "tt0285331",
+        "tmdb": 1973,
+        "tvrage": 2445
+      }
+    }
+  },
+  {
+    "plays": 79,
+    "last_watched_at": "2015-06-14T19:19:53.000Z",
+    "show": {
+      "title": "Breaking Bad",
+      "year": 2008,
+      "ids": {
+        "trakt": 1388,
+        "slug": "breaking-bad",
+        "tvdb": 81189,
+        "imdb": "tt0903747",
+        "tmdb": 1396,
+        "tvrage": 18164
+      }
+    }
+  },
+  {
+    "plays": 207,
+    "last_watched_at": "2015-06-14T19:19:51.000Z",
+    "show": {
+      "title": "How I Met Your Mother",
+      "year": 2005,
+      "ids": {
+        "trakt": 1095,
+        "slug": "how-i-met-your-mother",
+        "tvdb": 75760,
+        "imdb": "tt0460649",
+        "tmdb": 1100,
+        "tvrage": 3918
+      }
+    }
+  },
+  {
+    "plays": 3,
+    "last_watched_at": "2015-06-12T04:00:00.000Z",
+    "show": {
+      "title": "Justice League: Gods and Monsters Chronicles",
+      "year": 2015,
+      "ids": {
+        "trakt": 99679,
+        "slug": "justice-league-gods-and-monsters-chronicles",
+        "tvdb": 296699,
+        "imdb": "tt4324302",
+        "tmdb": 63266,
+        "tvrage": 49545
+      }
+    }
+  }
+]
