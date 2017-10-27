@@ -4,6 +4,7 @@ import styles from '../styles';
 import HistoryTab from './HistoryTab';
 import ShowsTab from './ShowsTab';
 import RecentTab from './RecentTab';
+import UpcomingTab from './UpcomingTab';
 
 export default class ShowsFooter extends React.Component {
     constructor(props) {
@@ -57,6 +58,7 @@ export default class ShowsFooter extends React.Component {
         var historyTab = <HistoryTab/>;
         var showsTab = <ShowsTab/>;
         var recentTab = <RecentTab init={true}/>;
+        var upcomingTab = <UpcomingTab init={true}/>
         return (
             <FooterTab>
                 <Button
@@ -94,7 +96,10 @@ export default class ShowsFooter extends React.Component {
                     <Icon active={this.state.tab3} name="film" />
                     <Text style={styles.tabHeading}>UPCOMING</Text>
                 </Button>
-                <Button active={this.state.tab4} onPress={() => this.toggleTab4()}>
+                <Button active={this.state.tab4} onPress={() => {
+                    updateContent(upcomingTab);
+                    this.toggleTab4()
+                }}>
                     <Icon active={this.state.tab4} name="flame" />
                     <Text style={styles.tabHeading}>RECENT</Text>
                 </Button>

@@ -1,12 +1,19 @@
 import React from 'react';
-import {Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, Footer, FooterTab } from "native-base";
+import {Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text, Footer, FooterTab, ActionSheet} from "native-base";
 import ShowsTab from './components/ShowsTab';
 import {Drawer} from 'native-base';
 import styles from "./styles";
 import ShowsFooter from './components/ShowsFooter';
 import Sidebar from './components/Sidebar';
+import Expo, { SQLite } from 'expo';
+import {Root} from 'native-base';
+import SyncPage from './components/SyncPage';
+import NavigatorIOS from 'react-native';
 
-
+const db = SQLite.openDatabase({ name: 'db.tv_series_guide' });
+const BUTTONS = ["Create App DB", "Option 1", "Option 2", "Delete", "Cancel"];
+const DESTRUCTIVE_INDEX = 3;
+const CANCEL_INDEX = 4;
 export default class App extends React.Component {
 
     constructor(props) {
@@ -39,10 +46,22 @@ export default class App extends React.Component {
         this.setState({mainContent: component});
     }
 
-    render() {
+    syncPage() {
+        console.log("Switching to sync page now");
+        this.navigator.push({
+            title: 'Sync Page',
+            component: SyncPage,
+        });
+    }
 
+    render() {
+        console.log("Clicked?? "+this.state.clicked);
+        if(this.state.clicked === BUTTONS[0]) {
+            this.syncPage();
+        }
         var updateContent = this.updateContent;
         return (
+            <Root>
             <Container style={styles.container}>
                 <Drawer
                     ref={(ref) => { this.drawer = ref; }}
@@ -60,7 +79,18 @@ export default class App extends React.Component {
                     <Right>
                         <Button transparent><Icon name="search" /></Button>
                         <Button transparent><Icon name="heart" /></Button>
-                        <Button transparent><Icon name="more" /></Button>
+                        <Button transparent onPress={() =>
+                            ActionSheet.show(
+                                {
+                                    options: BUTTONS,
+                                    cancelButtonIndex: CANCEL_INDEX,
+                                    destructiveButtonIndex: DESTRUCTIVE_INDEX,
+                                    title: "Testing ActionSheet"
+                                },
+                                buttonIndex => {
+                                    this.setState({ clicked: BUTTONS[buttonIndex] });
+                                }
+                            )}><Icon name="more" /></Button>
                     </Right>
 
                 </Header>
@@ -76,6 +106,7 @@ export default class App extends React.Component {
                 </Footer>
                 </Drawer>
             </Container>
+            </Root>
         );
     }
 }
