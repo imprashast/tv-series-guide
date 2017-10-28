@@ -5,9 +5,10 @@ import { Container, Header, Title, Button, Icon, Tabs, Tab, Right, Left, Body } 
 export default class ShowsTab extends React.Component {
 
     render() {
+        console.log(`Shows Tab: ${JSON.stringify(this.props)}`);
         return (
             <Container>
-                <EpisodeTile/>
+                <EpisodeTile navigation={this.props.navigation}/>
             </Container>
         );
     }

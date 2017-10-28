@@ -75,3 +75,6 @@ typings/
 .idea/**/gradle.xml
 .idea/**/libraries
 .idea
+
+#Keys
+app/api/Trakt.js

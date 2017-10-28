@@ -7,6 +7,7 @@ import {
 } from "native-base";
 import datas from '../api/json/shows.json';
 import RecentEpisodeTile from './RecentEpisodeTile';
+import TraktKey from "../api/Trakt";
 
 export default class RecentTab extends Component {
 
@@ -30,7 +31,7 @@ export default class RecentTab extends Component {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'trakt-api-version': '2',
-                'trakt-api-key': '',
+                'trakt-api-key': TraktKey,
             }
         })
             .then(response => response.json())

@@ -1,5 +1,6 @@
 import React from 'react';
 import datas from '../api/json/shows.json';
+import TraktKey from "../api/Trakt";
 
 function fetchDataFromAPI(id) {
         let URI = "https://api.trakt.tv/shows/"+id+"/next_episode";
@@ -9,7 +10,7 @@ function fetchDataFromAPI(id) {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'trakt-api-version': '2',
-                'trakt-api-key': '',
+                'trakt-api-key': TraktKey,
             }
         })
             .then(response => response.json())

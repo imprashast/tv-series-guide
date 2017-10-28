@@ -13,7 +13,8 @@ export default class ShowsFooter extends React.Component {
             tab1: true,
             tab2: false,
             tab3: false,
-            tab4: false
+            tab4: false,
+            navigate: this.props.navigate
         };
     }
 
@@ -54,9 +55,10 @@ export default class ShowsFooter extends React.Component {
     }
 
     render() {
+        console.log(`Shows footer: ${JSON.stringify(this.props)}`);
         var updateContent = this.props.updateContent;
         var historyTab = <HistoryTab/>;
-        var showsTab = <ShowsTab/>;
+        var showsTab = <ShowsTab navigate={this.state.navigate}/>;
         var recentTab = <RecentTab init={true}/>;
         var upcomingTab = <UpcomingTab init={true}/>
         return (

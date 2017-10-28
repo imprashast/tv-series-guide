@@ -4,37 +4,44 @@ import {Container, Header, Title, Content, Button, Icon, Left, Right, Body, Text
 import styles from "../styles";
 import { Grid, Row } from "react-native-easy-grid";
 import SingleEpisodeTile from './SingleEpisodeTile';
-import datas from '../api/json/shows.json';
+import Expo, {SQLite} from 'expo';
 
+const db = SQLite.openDatabase({name: 'db.tv_series_guide'});
 export default class EpisodeTile extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            listViewData: datas,
+            listViewData: [],
         };
+    }
+
+    componentDidMount() {
+        db.transaction((tx) => {
+            tx.executeSql('SELECT * FROM shows ORDER BY title ASC', [], (tx, results) => {
+                console.log("Query completed");
+
+                var len = results.rows.length;
+                for (let i = 0; i < len; i++) {
+                    let row = results.rows.item(i);
+                    this.state.listViewData.push(row);
+                }
+                this.setState({loaded: true});
+            });
+        });
     }
 
     render() {
         const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+        console.log(`Episode Tile: ${JSON.stringify(this.props)}`);
         return(
             <Container>
                 <Content>
                     <List
-                        //dataSource={this.ds.cloneWithRows(this.state.listViewData)}
-                        dataArray={datas}
+                        dataArray={this.state.listViewData}
                         renderRow={data =>
-                            <SingleEpisodeTile content={data} style={{paddingLeft: 0, backgroundColor: "#2a2a2a"}}/>}
-                        /*renderLeftHiddenRow={data =>
-                            <Button full onPress={() => alert(data)}>
-                                <Icon active name="information-circle" />
-                            </Button>}
-                        renderRightHiddenRow={(data, secId, rowId, rowMap) =>
-                            <Button full danger onPress={_ => this.deleteRow(secId, rowId, rowMap)}>
-                                <Icon active name="heart" />
-                            </Button>}
-                        leftOpenValue={75}
-                        rightOpenValue={-75}*/
+                            <SingleEpisodeTile content={data} style={{paddingLeft: 0, backgroundColor: "#2a2a2a"}} navigation={this.props.navigation}/>
+                        }
                     />
                 </Content>
             </Container>
