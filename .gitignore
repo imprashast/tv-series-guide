@@ -78,3 +78,4 @@ typings/
 
 #Keys
 app/api/Trakt.js
+app/api/Tvdb.js

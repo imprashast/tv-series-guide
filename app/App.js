@@ -1,23 +1,32 @@
 import React, { Component } from "react";
-import Expo from "expo";
-import AppRouter from './AppRouter';
+import Router from './components/Router';
+import { AppLoading } from 'expo';
+import {initDB} from './database/Init';
+import {insertTraktKey, fetchTraktKey} from './api/Trakt';
 
 export default class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            isReady: false
-        };
+
+    state = {
+        isReady: false,
+    };
+
+    async _cacheResourcesAsync() {
+        initDB();
+        insertTraktKey();
+        console.log(fetchTraktKey());
     }
-    async componentWillMount() {
-        await Expo.Font.loadAsync({
-            Roboto: require("native-base/Fonts/Roboto.ttf"),
-            Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-            Ionicons: require("native-base/Fonts/Ionicons.ttf")
-        });
-        this.setState({ isReady: true });
-    }
+
     render() {
-        return <AppRouter />;
+        if (!this.state.isReady) {
+            return (
+                <AppLoading
+                    startAsync={this._cacheResourcesAsync}
+                    onFinish={() => this.setState({ isReady: true })}
+                    onError={console.warn}
+                />
+            );
+        }
+        return <Router />;
     }
 }
+//export default from './storybook';

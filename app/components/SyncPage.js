@@ -1,155 +1,101 @@
 import React, {Component} from 'react';
-import {Container, Header, Title, Button, Icon, Right, Body, Content, Left, Text} from 'native-base';
-import Expo, {SQLite} from 'expo';
-import styles from "../styles";
-import data from '../api/json/shows.json';
+import {ActivityIndicator, Button, ScrollView} from 'react-native';
+import {resetDB} from "../database/Init";
+import {fetchAllShowFromList} from "../database/DbOps";
+import styles from "../styles/styles";
+import ShowTile from "./ShowTile";
+import { Root } from "native-base";
+import {white, black} from "../styles/colors";
+import { SearchBar } from 'react-native-elements';
+import {traktApiHelper} from '../api/ApiHelper';
 
-const db = SQLite.openDatabase({name: 'db.tv_series_guide'});
-export default class SyncPage extends React.Component {
+export default class SyncPage extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoading: false,
+            defaultShows: [],
+        };
+    }
 
     componentDidMount() {
-        db.transaction(tx => {
-            tx.executeSql(
-                'CREATE TABLE IF NOT EXISTS shows ( trakt INTEGER PRIMARY KEY NOT NULL , title TEXT , slug TEXT , tvdb INT , imdb TEXT , tmdb INT , tvrage INT , year TEXT , last_watched_at TEXT );'
-            );
-            tx.executeSql(
-                'create table if not exists seasons ( showTraktID integer primary key not null , number int , episodeCount int );'
-            );
-            tx.executeSql(
-                'create table if not exists episode ( showTraktID integer primary key not null , season int , number int , title text , trakt int ,  tvdb int , imdb text , tmdb int , tvrage int , overview text , firstAired text , imageURL text , tvdbRating text , director text );'
-            );
-        }, error => {
-            console.log(error);
-        });
+        this.setState({ isLoading: true });
+        this.fetchShowsFromDB();
+    }
 
-        data.map(t => {
-            {
-                console.log("Got row as: " + t.show.title);
-                db.transaction(
-                    tx => {
-                        tx.executeSql('INSERT OR IGNORE INTO shows (trakt, title, slug, tvdb, imdb, tmdb, tvrage, year, last_watched_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
-                            [t.show.ids.trakt, t.show.title, t.show.ids.slug, t.show.ids.tvdb, t.show.ids.imdb, t.show.ids.tmdb, t.show.ids.tvrage, t.show.year, t.last_watched_at]);
-                    },
-                    error => {
-                        console.log(error);
-                    }
-                );
-                console.log("Inserted");
-            }
-        });
-
-        console.log("DB Created");
-
-        db.transaction((tx) => {
-            tx.executeSql('SELECT * FROM shows', [], (tx, results) => {
-                console.log("Query completed");
-
-                var len = results.rows.length;
+    fetchShowsFromDB() {
+        fetchAllShowFromList((tx, results) => {
+            var len = results.rows.length;
+            if(len > 0) {
                 for (let i = 0; i < len; i++) {
                     let row = results.rows.item(i);
-                    console.log(`TraktID: ${row.trakt}, Title: ${row.title}`);
-                    this.populateSeasonsAndEpisodes(row.trakt);
+                    this.state.defaultShows.push(row);
                 }
-
-            });
-        });
-
-    }
-
-    populateSeasonsAndEpisodes(traktID) {
-        db.transaction((tx) => {
-            tx.executeSql('SELECT * FROM seasons where showTraktID = ?', [traktID], (tx, results) => {
-                console.log("Query completed");
-
-                let len = results.rows.length;
-                if(len === 0) {
-                    console.log(`No data for traktID: ${traktID} fetching....`);
-                    this.fetchDataFromAPI(traktID);
-                } else {
-                    console.log("Yay!! We have data for trakt:"+traktID);
-                }
-            });
+                this.setState({ isLoading: false });
+            }
         });
     }
 
-    async fetchDataFromAPI(id) {
-        let URI = "https://api.trakt.tv/shows/"+id+"/seasons?extended=episodes";
-        console.log(URI);
-        fetch(URI, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'trakt-api-version': '2',
-                'trakt-api-key': '0152ea69e59bb84b9632108f4c8717c116aaa7ef5973d9f945077d5f3009c9ab',
-            }
-        })
-            .then(response => response.json())
-            .then(response => this.insertSeasonAndEpisodeData(response, id))
-            .catch(error => {
-                console.log('Something bad happened ' + error);
-            });
+    resetDB() {
+        resetDB();
     }
 
-    async insertSeasonAndEpisodeData(row, id) {
-        console.log(`Data from api: ${row} for trackt:${id}`);
-        row.map(t => {
-            db.transaction(
-                tx => {
-                    tx.executeSql('INSERT OR IGNORE INTO seasons (showTraktID, number, episodeCount) VALUES (?, ?, ?)',
-                        [id, t.number, this.isEmpty(t.episodes)]);
-                },
-                error => {
-                    console.log(error);
-                }
-            );
-            t.episodes.map(ep => this.insertEpisodeData(ep, id));
-        })
-
-    }
-
-    async insertEpisodeData(row, id) {
-        db.transaction(
-            tx => {
-                tx.executeSql('INSERT OR IGNORE INTO episode (showTraktID, season, number, title, trakt, tvdb, imdb, tmdb, tvrage) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
-                    [id, row.season, row.number, row.title, row.ids.trakt, row.ids.tvdb, row.ids.imdb, row.ids.tmdb, row.ids.tvrage]);
-            },
-            error => {
-                console.log(error);
-            }
-        );
-        console.log(`Episode row ${row}`);
-    }
-
-    isEmpty(value) {
-        if (typeof value  !== "undefined" && value) {
-            return value.length;
-        } else {
-            return 0;
+    _onPress = (event) => {
+        this.setState({ isLoading: true });
+        if (event.length > 3) {
+            this.fetchSearch(event);
         }
     }
 
+    componentWillUnmount(){
+        clearTimeout(this.timeoutHandle);
+    }
+
+    fetchSearch(query) {
+        this.timeoutHandle = setTimeout(()=>{
+        }, 10000);
+        let url = "https://api.trakt.tv/search/show?query="+query;
+        traktApiHelper(url)
+            .then(response => this.populateSearchResults(response))
+    }
+
+    populateSearchResults(response) {
+        this.state.defaultShows = [];
+        response.map(t => this.transormObject(t)).map( t => this.state.defaultShows.push(t));
+        this.setState({ isLoading: false });
+    }
+
+    transormObject(object) {
+        let transformedObject = {title: object.show.title,
+            tvdb: object.show.ids.tvdb,
+            trakt: object.show.ids.trakt,  };
+        return transformedObject;
+    }
+
     render() {
+        const spinner = this.state.isLoading ?
+            <ActivityIndicator size='large'/> : null;
         return (
-            <Container style={styles.container}>
-                <Header>
-                    <Left>
-                        <Button transparent onPress={() => this.props.navigation.goBack()}>
-                            <Icon name="arrow-back"/>
-                        </Button>
-                    </Left>
-                    <Body>
-                    <Text>Sync</Text>
-                    </Body>
-                    <Right>
-                    </Right>
-                </Header>
-                <Content padder>
-                    <Text>
-                        Welcome to Sync page
-                    </Text>
-                </Content>
-            </Container>
+            <Root>
+            <ScrollView style={styles.container}>
+                <SearchBar
+                    noIcon
+                    lightTheme
+                    onChangeText={this._onPress}
+                    onClearText={this._onPress}
+                    placeholder='Type Here...' />
+                {
+                    this.state.defaultShows.map((t, i) => <ShowTile content={t} key={i} navigation={this.props.navigation}/>)
+                }
+                    {spinner}
+                    <Button
+                        onPress={this.resetDB}
+                        title="Reset DB"
+                        color="#841584"
+                    />
+            </ScrollView>
+            </Root>
         );
     }
 }

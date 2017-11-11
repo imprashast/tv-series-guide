@@ -2,7 +2,11 @@
   "expo": {
     "sdkVersion": "21.0.0",
     "splash": {
-      "image": "./img/splash.png"
-    }
+      "image": "./img/splash.png",
+      "backgroundColor": "#FF5E3A",
+      "resizeMode": "cover"
+    },
+    "name": "Tv Series Guide",
+    "slug": "Tv-Series-Guide"
   }
 }
